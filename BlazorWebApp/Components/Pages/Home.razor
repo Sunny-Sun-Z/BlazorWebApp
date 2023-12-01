@@ -1,0 +1,14 @@
+﻿@using BlazorWebApp.Components.Controlls;
+
+@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<br/>
+<br/>
+@* do not user rendermode in the component but use it where using the component *@
+<DisplayTimeComponent @rendermode="InteractiveServer"></DisplayTimeComponent>
