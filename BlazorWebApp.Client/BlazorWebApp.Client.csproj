@@ -4,11 +4,49 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	  <NoDefaultLauchSettingsFile>true</NoDefaultLauchSettingsFile>
+	  <StaticWebAssetProjectMode>Default</StaticWebAssetProjectMode>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Layout\**" />
+    <Compile Remove="Pages\**" />
+    <Compile Remove="Properties\**" />
+    <Compile Remove="wwwroot\css\**" />
+    <Compile Remove="wwwroot\sample-data\**" />
+    <Content Remove="Layout\**" />
+    <Content Remove="Pages\**" />
+    <Content Remove="Properties\**" />
+    <Content Remove="wwwroot\css\**" />
+    <Content Remove="wwwroot\sample-data\**" />
+    <EmbeddedResource Remove="Layout\**" />
+    <EmbeddedResource Remove="Pages\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <EmbeddedResource Remove="wwwroot\css\**" />
+    <EmbeddedResource Remove="wwwroot\sample-data\**" />
+    <None Remove="Layout\**" />
+    <None Remove="Pages\**" />
+    <None Remove="Properties\**" />
+    <None Remove="wwwroot\css\**" />
+    <None Remove="wwwroot\sample-data\**" />
+    <_WebToolingArtifacts Remove="Properties\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="App.razor" />
+    <Content Remove="wwwroot\favicon.png" />
+    <Content Remove="wwwroot\icon-192.png" />
+    <Content Remove="wwwroot\index.html" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" PrivateAssets="all" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+   
 </Project>

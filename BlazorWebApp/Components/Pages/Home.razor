@@ -1,5 +1,5 @@
-﻿@using BlazorWebApp.Components.Controlls;
-
+﻿@* @using BlazorWebApp.Components.Controlls; *@
+@using BlazorWebApp.Client.Components;
 @page "/"
 
 <PageTitle>Home</PageTitle>
@@ -11,4 +11,12 @@ Welcome to your new app.
 <br/>
 <br/>
 @* do not user rendermode in the component but use it where using the component *@
-<DisplayTimeComponent @rendermode="InteractiveServer"></DisplayTimeComponent>
+@* <DisplayTimeComponent @rendermode="InteractiveServer"></DisplayTimeComponent> *@
+@*  // below line apply for both in same project or in 2 projects *@
+@* <DisplayTimeComponent @rendermode="InteractiveServer"></DisplayTimeComponent> *@
+
+@* change into 2nd render method*@
+ <DisplayTimeComponent @rendermode="InteractiveWebAssembly"></DisplayTimeComponent>
+ <br/>
+ <br/>
+ <DisplayTimeComponent @rendermode="InteractiveServer"></DisplayTimeComponent>
